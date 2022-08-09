@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div className={styles.flexImg}>
 
-                    <Image src={AboutImg} layout="responsive" alt='about us image'/>
+                <Image src={AboutImg} layout="responsive" alt='about us image' />
             </div>
 
         </div>
