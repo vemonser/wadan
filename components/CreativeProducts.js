@@ -99,29 +99,32 @@ export default function CreativeProducts() {
                                     <div onMouseEnter={() => setHoverd(item.id)} className={styles.imgSlide}>
                                         <Image src={item.img} width={794} height={722} layout="responsive" objectFit={"cover"} objectPosition=" center right" alt={`our Creative Products image number ${item.id + 1} `} />
                                     </div>
-                                    <div className={styles.desc} style={hoverd === item.id ? { display: "flex", position: "absolute", bottom: "0%", zIndex: "20", transition: "all 500ms ease ", color: "#fff", background: "#be9e7999" } : { color: "#fff", display: "flex", opacity: 0, transition: "all 500ms ease ", position: "absolute", bottom: "20%", zIndex: "20" }} onMouseEnter={() => setHoverd(item.id)}  >
-                                        <h3 onMouseEnter={() => setHoverd(item.id)}>{item.OnHoverTitle}</h3>
-                                        <p onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverDesc}</p>
-                                    </div>
+                                    <div onMouseEnter={() => setHoverd(item.id)}
+                                        className={styles.desc} style={hoverd === item.id ?
+                                            { display: "flex", position: "absolute", height:"45%", bottom: "0%", zIndex: "20", transition: "all 500ms ease ", width: "100%", color: "#fff", background: "#be9e7999" } :
+                                    {color: "#fff", display: "flex", opacity: 0, height:"45%",transition: "all 500ms ease ", position: "absolute", bottom: "20%", width: "100%", zIndex: "20" }}   >
+                                    <h3 onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverTitle}</h3>
+                                    <p onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverDesc}</p>
                                 </div>
-                            )
+                                </div>
+                    )
                         })}
+                </div>
+                {loaded && instanceRef.current && (
+                    <div  >
+
+                        <RightArrow onClick={(e) =>
+                            e.stopPropagation() || instanceRef.current?.next()
+                        } width="40px" className={styles.rightarrw} />
+                        <LeftArrow onClick={(e) =>
+                            e.stopPropagation() || instanceRef.current?.prev()
+                        } width="40px" className={styles.leftarrw} />
                     </div>
-                    {loaded && instanceRef.current && (
-                        <div  >
+                )}
+            </div >
 
-                            <RightArrow onClick={(e) =>
-                                e.stopPropagation() || instanceRef.current?.next()
-                            } width="40px" className={styles.rightarrw} />
-                            <LeftArrow onClick={(e) =>
-                                e.stopPropagation() || instanceRef.current?.prev()
-                            } width="40px" className={styles.leftarrw} />
-                        </div>
-                    )}
-                </div >
-
-            </div>
-        </motion.div>
+        </div>
+        </motion.div >
 
     )
 
