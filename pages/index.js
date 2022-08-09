@@ -6,7 +6,7 @@ import CreativeProducts from '../components/CreativeProducts'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Partners from '../components/Partners'
-import Services from '../components/services'
+import Services from '../components/Services'
  export default function Home() {
   return (
     <div dir='rtl' style={{ scrollBehavior: 'smooth' }} >
