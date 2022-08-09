@@ -22,7 +22,8 @@
 .desc {
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding: 20px;
+  width:100%;
 }
 .flexImgsContainer {
   margin: 0 auto;
