@@ -9,7 +9,6 @@ import Twitter from "../public/assets/resources/logos/hero/Twitter"
 import Instagram from "../public/assets/resources/logos/hero/Instagram"
 import LeftArrow from "../public/assets/resources/logos/hero/LeftArrow"
 import RightArrow from "../public/assets/resources/logos/hero/RightArrow"
-import WadanLogoBlack from "../public/assets/resources/logos/hero/WadanLogoBlack.svg"
 import { useState, useEffect } from "react"
 // setTimeout
 
@@ -91,19 +90,17 @@ export default function Hero() {
         <>
             <div className={styles.Grid} id="home">
                 <div className={styles.hero}>
-                    <Image src={sliders[currentIndex]} objectFit="cover" objectPosition={"center 80%"} alt={`hero image ${sliders[currentIndex + 1]}`} layout="fill" />
+                    <Image src={sliders[currentIndex]} objectFit="cover" objectPosition={"center 80%"} alt={`hero image ${sliders[currentIndex +1]}`} layout="fill" />
                     {/* <Image src={sliders[currentIndex + 1]} objectFit="cover" objectPosition={"center 80%"} layout="fill" /> */}
                     <div className={styles.bg} style={clientWindowHeight > 280 ? { background: "#ffff", color: "#000" } : { background: "transparent" }}>
                         <nav className={styles.nav} >
                             <div className={styles.navLogo}>
-                                {clientWindowHeight > 280 ? <Image src={WadanLogoBlack} alt="logo image" layout="responsive" />
-                                    : < Image src={navbarLogo} alt="logo image" layout="responsive" />
-                                }
+                                <Image src={navbarLogo} alt="logo image" layout="responsive" />
                             </div>
                             <ul>{navbarLinks.navbar.map(item => {
                                 return (
                                     <Link key={item.id} to={item.route} spy={true} smooth={true} offset={-60} duration={500} >
-                                        <li style={clientWindowHeight > 280 ? { color: "#000" } : { color: "#fff" }}>{item.name}</li>
+                                        <li  style={clientWindowHeight > 280 ? { color: "#000" } : { color: "#fff" }}>{item.name}</li>
                                     </Link>
                                 )
                             }
@@ -128,7 +125,7 @@ export default function Hero() {
                                 <LeftArrow width="40px" />
                             </div>
                         </div>
-
+    
 
                         <div className={styles.dots} dir="ltr">
                             {Array.from({ length: 3 }).map((item, index) => (

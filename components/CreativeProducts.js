@@ -16,7 +16,7 @@ const content = {
 const items = [
     {
         id: 0,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p1-1.png",
+        img: " https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p1-1.png",
         OnHoverTitle: "تكسيات ( PVC ) داخلية",
         OnHoverDesc: "قوالب بولسترين الواح ديكورية بأشكال مختلفة (خشبي، اسمنتي، دهان، معجون، حجري ....)"
     },
@@ -119,6 +119,7 @@ export default function CreativeProducts() {
             </div >
 
         </div>
+
     )
 
 

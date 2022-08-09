@@ -7,20 +7,25 @@ const content = {
     "desc": "متخصصون بالديكورات الداخلية والخارجية معنا بيتك أجمل",
     "nav": [
         {
+            "id": "0",
             "name": "الرئيسية",
             "route": "home"
         },
         {
+            "id": "1",
             "name": "من نحن",
             "route": "about"
         }, {
+            "id": "2",
             "name": "خدماتنا",
             "route": "Services"
         },
         , {
+            "id": "3",
             "name": "منتجاتنا الإبداعية",
             "route": "CreativeProducts"
         }, {
+            "id": "4",
             "name": "اتصل بنا",
             "route": "Contact"
         }
@@ -38,7 +43,7 @@ export default function Footer() {
             <div className={styles.maxWfooter}>
                 <div className={styles.rightFlex}>
                     <div className={styles.logo}>
-                        <Image src={content.logo} width={1000} height={1000} layout={"responsive"} alt="logo icon" />
+                        <Image src={content.logo} width={1000} height={1000} layout={"responsive"} alt="logo icon"/>
                     </div>
                     <div className={styles.rightFlexDesc}>
                         <p className={styles.rightFlexp}>{content.desc}</p>
