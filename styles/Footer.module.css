@@ -6,29 +6,25 @@
   color: #fff;
 }
 .maxWfooter {
-  max-width: 90vw;
+  padding-top: 5%;
+  width: 100%;
   display: flex;
-  align-items: center;
   padding-right: 10%;
   position: relative;
-
+  justify-content: space-between;
   font-size: small;
-  gap: 200px;
+}
+.rightFlex {
+  width: 100%;
 }
 .rightFlexp {
-  width: 60%;
-  position: relative;
-  padding-bottom: 30px;
+  line-height: 1.5;
+  width: 205px;
 }
-.navLinks {
-  width: max-content;
-  cursor: pointer;
-}
+
 .logo {
-  width: 70px;
-  position: absolute;
-  right: 12%;
-  top: 0%;
+  width: 60px;
+  padding-bottom: 10px;
   z-index: 50;
 }
 
@@ -68,11 +64,16 @@
 
 @media screen and (max-width: 500px) {
   .rightFlexp {
-    padding: 15px 0;
+    padding: 15px 0 0 0;
   }
   .footer {
-    height: 300px;
+    height: 350px;
   }
+  .maxWfooter{
+
+    flex-direction: column;
+  }
+
   .rightFlexNav {
     flex-direction: column;
   }
@@ -83,12 +84,17 @@
     top: -5%;
   }
   .rightFlexp {
-    width: 100%;
+    width: 70%;
     position: relative;
-    padding: 50px 0 30px 0;
+    padding: 50px 0 0 0;
   }
-
+  .mobileLayout{
+padding: 0  0 45px 0;
+  }
   .leftFlex {
     margin-top: -25px;
+  }
+  .leftFlexAddres{
+    padding-top: 40px;
   }
 }

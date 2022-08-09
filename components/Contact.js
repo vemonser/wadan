@@ -1,11 +1,12 @@
 import styles from '../styles/Contact.module.css'
 import Image from "next/image"
 import { useState } from 'react';
+import { motion } from "framer-motion"
 
 const content =
 
 {
-    "title": "تريد التواصل معنا وطلــب أحــد خدمــاتنــا",
+    "title": "لطلب إحدي خدماتنا ",
     "contact": "اتصل بنـا",
     "contactDetail": "معلومات التواصل ",
     "addressTitle": " العنوان :  ",
@@ -17,34 +18,41 @@ const content =
 export default function Contact() {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <div className={styles.container} id="Contact">
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        >
+            <div className={styles.container} id="Contact">
 
-            <div className={styles.flex}>
-                <h1>{content.title}</h1>
-                <div>
-                    <button className={styles.btn} onClick={() => setIsOpen(true)}>{content.contact}</button>
-                </div>
-                <div className={styles.active} style={isOpen ? { opacity: 1, display: "block" } : { opacity: 0, display: "none" }} >
+                <div className={styles.flex}>
+                    <h1>{content.title}</h1>
+                    <div>
+                        <button className={styles.btn} onClick={() => setIsOpen(true)}>{content.contact}</button>
+                    </div>
+                    <div className={styles.active} style={isOpen ? { opacity: 1, display: "block" } : { opacity: 0, display: "none" }} >
 
-                    <div className={styles.overlay} onClick={() => setIsOpen(false)} >
-                    </div>
-                    <div className={styles.closeIcon} onClick={() => setIsOpen(false)}>
-                        <span ></span>
-                        <span ></span>
-                    </div>
-                    <div className={styles.box}>
-                        <h2 className={styles.center}>{content.contactDetail}</h2>
-                        <div className={styles.concatination}>
-                            <h3>{content.addressTitle}</h3>
-                            <p> {content.address} </p>
+                        <div className={styles.overlay} onClick={() => setIsOpen(false)} >
                         </div>
-                        <h3>{content.tel}</h3>
-                        <p>{content.email}</p>
+                        <div className={styles.closeIcon} onClick={() => setIsOpen(false)}>
+                            <span ></span>
+                            <span ></span>
+                        </div>
+                        <div className={styles.box}>
+                            <h2 className={styles.center}>{content.contactDetail}</h2>
+                            <div className={styles.concatination}>
+                                <h3>{content.addressTitle}</h3>
+                                <p> {content.address} </p>
+                            </div>
+                            <h3>{content.tel}</h3>
+                            <p>{content.email}</p>
 
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
+
     )
+
 
 }

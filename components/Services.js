@@ -41,30 +41,31 @@ export default function Services() {
     return (
 
         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0, transition: { duration: 1}}}
         >
-            <div className={styles.container} id="Services">
-                <div className={styles.titleContainer}>
-                    <h1>
-                        {content.title}
-                    </h1>
-                </div>
-                <div className={styles.flexContainer}>
-                    {items.map(item => {
-                        return (
-                            <div className={styles.flexCol} key={item.id}>
-                                <div className={styles.imgSize} >
-                                    <Image src={item.logo} width="1000" height={1000} layout="responsive" alt='our Service icon' />
-                                </div>
-                                <h3>{item.service}</h3>
-                                <p>{item.desc}</p>
-                            </div>
-                        )
-                    })}
-                </div>
-            </div>
-        </motion.div>
+    <div className={styles.container} id="Services">
+        <div className={styles.titleContainer}>
+            <h1>
+                {content.title}
+            </h1>
+        </div>
+        <div className={styles.flexContainer}>
+            {items.map(item => {
+                return (
+                    <div className={styles.flexCol} key={item.id}>
+                        <div className={styles.imgSize} >
+                            <Image src={item.logo} width="1000" height={1000} layout="responsive" alt='our Service icon' />
+                        </div>
+                        <h3>{item.service}</h3>
+                        <p>{item.desc}</p>
+                    </div>
+                )
+            })}
+        </div>
+    </div>
+        </motion.div >
+
 
     )
 }
