@@ -1,0 +1,83 @@
+.mainTitle h1 {
+  padding-bottom: 10vh;
+  position: relative;
+}
+.mainTitle h1::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #be9e79;
+  bottom: 40%;
+  right: 0;
+}
+.mainTitle {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.container {
+  padding: 10vh 0;
+  position: relative;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.flexImgsContainer {
+  margin: 0 auto;
+  max-width: 80vw;
+
+  display: flex;
+  gap: 1%;
+}
+ 
+.imgSlide {
+  width: 100%;
+}
+ 
+.arrows {
+  justify-content: space-between;
+  display: flex;
+  max-width: 80vw;
+  position: relative;
+}
+
+.rightarrw{
+  position: absolute;
+  right: 8%;
+  top: 55%;
+}
+.leftarrw{
+  position: absolute;
+  left: 9%;
+  top: 55%;
+}
+@media screen and (max-width: 600px) {
+  .flexImgsContainer {
+    width: 80vw;
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .arrows {
+    z-index: 50;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ImgContainer {
+    transform: translateX(100%);
+    width: 100%;
+    flex-shrink: 0;
+    scroll-behavior: smooth;
+    scroll-snap-align: start;
+  }
+  .desc {
+    opacity: 1 ;
+  }
+  .mainTitle h1 {
+    font-size: x-large;
+  }
+}
+/* {hoverd === item.id ? styles.visible : ""}>{item.OnHover}</p> */
