@@ -16,7 +16,7 @@ const items = [
         "id": 1,
         "logo": "https://raw.githubusercontent.com/vemonser/photos/3fb181665249fe898c95c24188b76f7b8bd23293/02.svg",
         "service": "ارضيات البلاستيك الصلب SPC ",
-        "desc": "ورق جدران بوجه بلاستيك. مقاس 15.60×1.06"
+        "desc": "ورق جدران بوجه بلاستيك. مقاس 15.60 1.06"
     },
     {
         "id": 3,
