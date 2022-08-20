@@ -5,7 +5,13 @@ import LeftArrow from "../public/assets/resources/logos/CreativeProducts arrows/
 import RightArrow from "../public/assets/resources/logos/CreativeProducts arrows/RightArrow"
 import "keen-slider/keen-slider.min.css"
 import { motion } from "framer-motion"
-
+import img1 from "../public/assets/resources/images/creative products slider/p1-1.png"
+import img2 from "../public/assets/resources/images/creative products slider/02.jpeg"
+import img3 from "../public/assets/resources/images/creative products slider/p3.png"
+import img4 from "../public/assets/resources/images/creative products slider/p4.png"
+import img5 from "../public/assets/resources/images/creative products slider/p5.png"
+import img6 from "../public/assets/resources/images/creative products slider/p6.png"
+import img7 from "../public/assets/resources/images/creative products slider/p2.png"
 import { useState } from 'react';
 
 const content = {
@@ -14,44 +20,44 @@ const content = {
 const items = [
     {
         id: 0,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p1-1.png",
+        img: img1,
         OnHoverTitle: "تكسيات ( PVC ) داخلية",
         OnHoverDesc: "قوالب بولسترين الواح ديكورية بأشكال مختلفة (خشبي، اسمنتي، دهان، معجون، حجري ....)"
     },
 
     {
         id: 1,
-        img: "https://github.com/vemonser/photos/blob/main/02.jpeg?raw=true",
+        img: img2,
         OnHoverTitle: "قوالب بولسترين الواح ديكورية بأشكال مختلفة ( خشبي, اسمنتي , دهان, معجون, حجري ...)",
         OnHoverDesc: "قوالب بولسترين الواح ديكورية بأشكال مختلفة ( خشبي, اسمنتي , دهان, معجون, حجري ...)"
     },
     {
         id: 2,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p3.png",
+        img: img3,
         OnHoverTitle: "ورق جدران",
         OnHoverDesc: "ورق جدران بوجه بلاستيك.  مقاس: 1.06 × 15.60"
     },
     {
         id: 3,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p4.png",
+        img: img4,
         OnHoverTitle: " تكسيات ( PVC ) داخلية",
         OnHoverDesc: " قوالب بولسترين الواح ديكورية بأشكال مختلفة (خشبي، اسمنتي، دهان، معجون، حجري ....)"
     },
     {
         id: 4,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p5.png",
+        img: img5,
         OnHoverTitle: "إطارات ديكورية ( بانوهات )",
         OnHoverDesc: "بديلة للديكورات الجصية واكثر صلابة واسهل تركيب"
     },
     {
         id: 5,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p6.png",
+        img: img6,
         OnHoverTitle: "تكسيات (WPC) داخلية وخارجية",
         OnHoverDesc: "قوالب مصنوعة من عجينة من الخشب والبلاستيك لتكون أكثر صلابة ومقاومة"
     },
     {
         id: 6,
-        img: "https://mayada.azq1.com/wp/wadaan/wp-content/uploads/2021/10/p2.png",
+        img: img7,
         OnHoverTitle: "ارضيات البلاستيك الصلب SPC",
         OnHoverDesc: "البديل الأفضل للباركيه  لايتأثر بالماء و يتلافى عيوب التمدد والانكماش"
     },
@@ -101,29 +107,29 @@ export default function CreativeProducts() {
                                     </div>
                                     <div onMouseEnter={() => setHoverd(item.id)}
                                         className={styles.desc} style={hoverd === item.id ?
-                                            { display: "flex", position: "absolute", height:"45%", bottom: "0%", zIndex: "20", transition: "all 500ms ease ", width: "100%", color: "#fff", background: "#be9e7999" } :
-                                    {color: "#fff", display: "flex", opacity: 0, height:"45%",transition: "all 500ms ease ", position: "absolute", bottom: "20%", width: "100%", zIndex: "20" }}   >
-                                    <h3 onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverTitle}</h3>
-                                    <p onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverDesc}</p>
+                                            { display: "flex", position: "absolute", height: "45%", bottom: "0%", zIndex: "20", transition: "all 500ms ease ", width: "100%", color: "#fff", background: "#be9e7999" } :
+                                            { color: "#fff", display: "flex", opacity: 0, height: "45%", transition: "all 500ms ease ", position: "absolute", bottom: "20%", width: "100%", zIndex: "20" }}   >
+                                        <h3 onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverTitle}</h3>
+                                        <p onMouseEnter={() => setHoverd(item.id)} >{item.OnHoverDesc}</p>
+                                    </div>
                                 </div>
-                                </div>
-                    )
+                            )
                         })}
-                </div>
-                {loaded && instanceRef.current && (
-                    <div  >
-
-                        <RightArrow onClick={(e) =>
-                            e.stopPropagation() || instanceRef.current?.next()
-                        } width="40px" className={styles.rightarrw} />
-                        <LeftArrow onClick={(e) =>
-                            e.stopPropagation() || instanceRef.current?.prev()
-                        } width="40px" className={styles.leftarrw} />
                     </div>
-                )}
-            </div >
+                    {loaded && instanceRef.current && (
+                        <div  >
 
-        </div>
+                            <RightArrow onClick={(e) =>
+                                e.stopPropagation() || instanceRef.current?.next()
+                            } width="40px" className={styles.rightarrw} />
+                            <LeftArrow onClick={(e) =>
+                                e.stopPropagation() || instanceRef.current?.prev()
+                            } width="40px" className={styles.leftarrw} />
+                        </div>
+                    )}
+                </div >
+
+            </div>
         </motion.div >
 
     )
